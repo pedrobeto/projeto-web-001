@@ -1,0 +1,222 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin 0;
+}
+
+body {
+	background: grey;
+	font-family: sans-serif;
+}
+
+nav {
+	background: #ddd;
+	padding: 5px 20px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: #1A5276;
+	text-decoration: none;
+}
+
+a:hover{
+	color: white;
+}
+
+.menu li {
+	font-size: 16px;
+	padding: 15px 5px;
+}
+
+.menu li a{
+	display: block;
+}
+
+.logo a img{
+	width: 200px;
+	height: auto;
+}
+
+.button.secondary {
+	border-bottom: 1px #444 solid;
+}
+
+/* MOBILE MENU */
+
+.menu{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.toggle {
+	order: 1;
+}
+
+.item.button {
+	order: 2;
+}
+
+.item {
+	width: 100%;
+	text-align: center;
+	order: 3;
+	display: none;
+}
+
+.item.active {
+	display: block;
+}
+
+
+.toggle {
+	cursor: pointer;
+}
+
+.bars {
+	background: #1A5276;
+	display: inline-block;
+	height: 2px;
+	width: 20px;
+	position: relative;
+}
+
+.bars::before,.bars::after {
+	background: #1A5276;
+	content: "";
+	display: inline-block;
+	position: absolute;
+	height: 2px;
+	width: 20px;
+}
+
+.bars::before {
+	top: 5px;
+}
+
+.bars::after {
+	top: -5px;
+}
+
+/*TABLET MENU*/
+
+@media all and (min-width: 450px){
+	.menu {
+		justify-content: center; 
+	}
+
+	.logo {
+		flex: 1;
+	}
+
+	.item.button {
+		width:auto;
+		order:1;
+		display:block;
+	}
+
+	.toggle {
+		order: 2;
+	}
+
+	.button.secondary {
+		border:0;
+	}
+	
+	.button a {
+		text-decoration: none;
+		padding: 7px 15px;
+		color: white;
+		background: #3649AB;
+		border: 1px solid #2037AF;
+		border-radius: 12033em;
+	}
+
+	.button.secondary a{
+		background: transparent;
+	}
+
+	.button a:hover {
+		transition: all .25s;
+	}
+
+	.button:not(.secondary) a:hover {
+		background: #040F49;
+		border-color: #030B30;
+	}
+
+	.button.secondary a:hover {
+		background: #3649AB;
+	}
+
+}
+
+
+/*DESKTOP MENU*/
+
+
+
+@media all and (min-width: 768px) {
+
+	.item {
+		display: block;
+		width: auto;
+	}
+
+	.toggle {
+		display: none;
+	}
+
+	.logo a img {
+		order 0;
+		width: 300px;
+		height: auto;
+	}
+
+	.item {
+		order: 1;
+	}
+
+	.button {
+		order: 2;
+	}
+
+	.menu li{
+		padding: 15px 10px;
+	}
+
+	.menu li.button {
+		padding-right: 0;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
